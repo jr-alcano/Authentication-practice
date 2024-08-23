@@ -1,0 +1,9 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username }} <br>
+    {{ form.password.label }} {{ form.password }} <br>
+    {{ form.email.label }} {{ form.email }} <br>
+    {{ form.first_name.label }} {{ form.first_name }} <br>
+    {{ form.last_name.label }} {{ form.last_name }} <br>
+    <button type="submit">Register</button>
+</form>

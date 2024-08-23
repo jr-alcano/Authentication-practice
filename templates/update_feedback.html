@@ -1,0 +1,10 @@
+<h1>Update Feedback</h1>
+<form method="POST">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="{{ feedback.title }}" required><br>
+
+    <label for="content">Content</label>
+    <textarea name="content" id="content" required>{{ feedback.content }}</textarea><br>
+
+    <button type="submit">Update Feedback</button>
+</form>

@@ -1,0 +1,22 @@
+<h1>User: {{ user.username }}</h1>
+<p>Email: {{ user.email }}</p>
+<p>First Name: {{ user.first_name }}</p>
+<p>Last Name: {{ user.last_name }}</p>
+
+<h2>Feedback</h2>
+<ul>
+    {% for feedback in feedbacks %}
+    <li>
+        <strong>{{ feedback.title }}</strong>: {{ feedback.content }}
+        <a href="/feedback/{{ feedback.id }}/update">Edit</a>
+        <form method="POST" action="/feedback/{{ feedback.id }}/delete" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="/users/{{ user.username }}/feedback/add">Add Feedback</a>
+<form method="POST" action="/users/{{ user.username }}/delete">
+    <button type="submit">Delete Account</button>
+</form>
